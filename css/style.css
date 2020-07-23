@@ -3,7 +3,7 @@
     src: url('Mermaid1001.ttf') format('truetype');
 }
 body {
-    font-family: 'mermaid';
+    font-family: 'mermaid', Georgia, Verdana;
     margin: 0;
     padding: 0;
 }
