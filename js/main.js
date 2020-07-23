@@ -208,4 +208,3 @@
     }
 }
 let monMain = new Main();
-console.log(localStorage.nom);
