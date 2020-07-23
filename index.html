@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/style.css">
+    <title>Reservation de vélo</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+          integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+          crossorigin="" />
+    <link rel="stylesheet" href="css/dist/MarkerCluster.css" />
+    <link rel="stylesheet" href="css/dist/MarkerCluster.Default.css" />
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css"/>
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+            integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+            crossorigin=""></script>
+    <script src="css/dist/leaflet.markercluster.js"></script>
+</head>
+<body>
+    <h1>Réservation de vélo</h1>
+    <div id="diapo">
+        <button id="pre" class="return"><i class="fa fa-arrow-circle-o-left fa-3x" aria-hidden="true"></i></button>
+        <div id="pict">
+            <img id="imgSlide" />
+            <p id="txtSlide"> </p>
+        </div>
+        <button id="next" class="forward"><i class="fa fa-arrow-circle-o-right fa-3x" aria-hidden="true"></i></button>
+    </div>
+
+    <button id="play"><i class="fa fa-play" aria-hidden="true"></i></button>
+    <button id="pause"><i class="fa fa-pause fa-1x" aria-hidden="true"></i> </button>
+
+    <div id="info">
+        <div id="map">
+        </div>
+        <div id="container">    
+            <i class="fa fa-bicycle fa-3x" aria-hidden="true"></i>
+            <div id="reservation">
+                <h3>Réservation</h3>
+                <h4>Station : <span id="stationName"> </span></h4>
+                <h4>Adresse : <span id="stationAddress"></span></h4>
+                <div id="stand"> </div>
+                <div id="bikesAvailable"> </div>
+                <div id="newsbike">
+                    <h5>Vélo disponible : <span id="bike"> </span></h5>
+                    <h5>Stand disponible : <span id="freeStand"> </span></h5>
+                </div>
+        
+            <form method="post" id="formulaire">
+                <label for="fName"> Prénom : </label><input type="text" name="fName" id="fName" required="required" /></br>
+                <label for="name" id="input_name"> Nom : </label><input type="text" name="name" id="name" value="" />
+                <input type="submit" value="Envoyer" id="valider" />
+            </form>
+            </div>
+        </div>
+
+
+        </div>
+    
+    <div>
+        <div id="signer">
+            <span id="contrat">Votre signature : </span>
+            <canvas> </canvas>
+            <button id="valid">Valider</button>
+            <button id="correction">Effacer</button>
+        </div>
+        <div id="confirm">
+            <span id="nameR"> </span>
+            <span id="timeR"> </span>
+        </div>
+    </div>
+
+    <script src="js/diaporama.js"></script>
+    <script src="js/createMap.js"></script>
+    <script src="js/timer.js"></script>
+    <script src="js/canvas.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
