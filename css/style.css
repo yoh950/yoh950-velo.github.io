@@ -140,6 +140,9 @@ h6 {
     #pre, #next {
         display: none;
     }
+    #txtSlide {
+        color: #82C46C;
+    }
     #map {
         position: relative;
         height: 300px;
